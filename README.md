@@ -1,6 +1,8 @@
 # EasyOpenMM
 An easy openMM example.
 
+Please focus your attention on `utils.py` file.
+
 ## Description
 In this repo you can see an easy example code of OpenMM. To run this code you need to have installed OpenMM library https://openmm.org/ in your python environment. In `sim.py` you can see the main file for our simulation framework. In this simulation there are two basic forces that connect adjacent beads: a harmonic bond force that connects beads $i$ with $i+1$ and a harmonic angle force that is applied in the pairs of atoms $i-1$ with $i$ and $i$ with $i+1$. We use langevin integrator to minimize the energy, which means that we assume that our polymer is inside a viscous fluid. Additionally, there is a molecular dynamics part where we set a random velocity field to the atoms of the polymer and we can see how the function changes over time.
 
