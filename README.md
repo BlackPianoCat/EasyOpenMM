@@ -9,6 +9,8 @@ An easy way to vizualize the results of the simulation is by the software UCSF C
 ## Tasks
 In this section I will write the tasks that you will have to do every week, and it will be updated each week.
 
+Having this repository as template:
+
 1. Run the script and load `.cif` files with in UCSF Chimera. Additionally, find out how you can vizualize the video of MD simulation with the pair of `.psf` and `.dcd` file in UCSF Chimera. What is the difference between minimizing the initial structure in respect to a forcefield and running molecular dynamics simulation?
 2. Play with the temperature, drug coefficient and step of your integrator. Can you summarize the conclusions of your results?
 3. What other integrators exist in OpenMM? Implement some of them and try to understand the differences in their implementation and how affect the results?
