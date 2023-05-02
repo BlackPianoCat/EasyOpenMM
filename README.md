@@ -28,5 +28,7 @@ New tasks:
 10. Now do the following two plots, which will help you to do some diagnostics so as to understand if your simulation works well.
 
     a. Plot the distance between $i$ and $j$ as a function of time. Where $i$ and $j$ are the beads which are connected by the loop force.
+    
     b. Use the function `distance.cdist()`  of `scipy.spatial`, so as to create a matrix $N\times N$ with the all versus all distances between atoms of your polymer. First plot the matrix as a heatmap for the minimized structure, and then try to create a video, which will show how the all versus all distance heatmap changes over time.
+    
     c. Plot the average (over simulation time) distance heatmap, and the variance (over simulatiomn time) of distance heatmaps.
