@@ -21,9 +21,6 @@ Having this repository as template:
 6. Let's focus on the loop force that connects atom 10 with atom 70. Implement a separate force `loop_force()` responsible for long range bonds that will be a separate class from `bond_force()` that connects adjacent beads. Can you implement a script where this force will change during the simulation? Try to make it change like (10,70),(11,69),(12,68),(13,67),(14,66),.... To achieve this goal, define a molecular simulation step (i.e. step=100) and try to change the parameters of loop extrusion force during  each step of the molecular simulation. How the resulting video depends on the simulation step?
 7. Implement Leaonard-Jones potential. To do that use custom non bonded force of OpenMM http://docs.openmm.org/latest/api-python/generated/openmm.openmm.CustomNonbondedForce.html. Try to tune the parameters of Leonard-Jones potential so as to make the simulation not to blow up. (note: take care of what integration step you use, it can be that the simulation would blow up if the step is too big).
 8. Now keep `loop_force()` fixed over time, and try to see what happens if you add three fixed loops implemented as harmonic bonds (i.e. (10,70),(20,30),(80,90)). Generalize it for $N$ loops.
-
-New tasks:
-
 9. Comment the previously defined Leonard-Jones potential, and let's try an easier case. Let's define Leonard_Jones potential as, $$V_{LJ}=\epsilon \left(\frac{\sigma_{1}\sigma_{2}}{r}\right)^{\alpha}$$. This means that for now we are focusing in the repelling part of the Leonard-Jones potential. Play with the different values of $\alpha$.
 10. Now do the following two plots, which will help you to do some diagnostics so as to understand if your simulation works well.
 
@@ -32,3 +29,9 @@ New tasks:
     b. Use the function `distance.cdist()`  of `scipy.spatial`, so as to create a matrix $N\times N$ with the all versus all distances between atoms of your polymer. First plot the matrix as a heatmap for the minimized structure, and then try to create a video, which will show how the all versus all distance heatmap changes over time.
     
     c. Plot the average (over simulation time) distance heatmap, and the variance (over simulatiomn time) of distance heatmaps.
+    
+New tasks:
+
+11. Write the algorithm the as a class. This class should have an `init` function where the most important parameters of the simulation are determined. It should have a function where the forces are determined, and another one class for energy minimization or molecular simulation.
+12. Find the `.bedpe` file in the github repository and create a function that reads it as a pandas dataframe and it reades the anchors. This function should read the loops for a paricular chromosome and region, and downgrade them into appropriate resolution so as to fit the dimension of the polymer. The output of this function should be a numpy array with left and right side anchors.
+13. Modify your simulation class, so as to take these loops as input and run a simulation for the loops specified from the experiment.  
