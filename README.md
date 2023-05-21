@@ -35,5 +35,6 @@ Having this repository as template:
 13. Modify your simulation class, so as to take these loops as input and run a simulation for the loops specified from the experiment.
 
 New tasks:
-    14. Download the `.hic` data and `.bedpe` for CTCF ChIA-PET for GM12878 from ENCODE https://www.encodeproject.org/. Keep the anchors with the higher PET-count. Moreover download Hi-C data (like the ones in the repository) for the same cell-line GM12878. Check the differences between them and try to create models for both kinds of data.
-    15. Install Juicerbox and vizualize the `.hic` heatmaps and the loops to have better idea what is going on: https://github.com/aidenlab/Juicebox.
+
+14. Download the `.hic` data and `.bedpe` for CTCF ChIA-PET for GM12878 from ENCODE https://www.encodeproject.org/. Keep the anchors with the higher PET-count. Moreover download Hi-C data (like the ones in the repository) for the same cell-line GM12878. Check the differences between them and try to create models for both kinds of data.
+15. Install Juicerbox and vizualize the `.hic` heatmaps and the loops to have better idea what is going on: https://github.com/aidenlab/Juicebox.
