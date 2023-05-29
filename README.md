@@ -33,8 +33,8 @@ Having this repository as template:
 11. Write the algorithm the as a class. This class should have an `init` function where the most important parameters of the simulation are determined. It should have a function where the forces are determined, and another one class for energy minimization or molecular simulation.
 12. Find the `.bedpe` file in the github repository and create a function that reads it as a pandas dataframe and it reades the anchors. This function should read the loops for a paricular chromosome and region, and downgrade them into appropriate resolution so as to fit the dimension of the polymer. The output of this function should be a numpy array with left and right side anchors.
 13. Modify your simulation class, so as to take these loops as input and run a simulation for the loops specified from the experiment.
-
-New tasks:
-
 14. Download the `.hic` data and `.bedpe` for CTCF ChIA-PET for GM12878 from ENCODE https://www.encodeproject.org/. Keep the anchors with the higher PET-count. Moreover download Hi-C data (like the ones in the repository) for the same cell-line GM12878. Check the differences between them and try to create models for both kinds of data.
 15. Install Juicerbox and vizualize the `.hic` heatmaps and the loops to have better idea what is going on: https://github.com/aidenlab/Juicebox.
+
+New tasks:
+16. Try to make loop extrusion force dependent on the value of the PET-count, so as to have closer distance when the PET-count is higher and bigger distance when the PET-count is lower. Experiment and implement your own function for that. 
