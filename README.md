@@ -37,4 +37,5 @@ Having this repository as template:
 15. Install Juicerbox and vizualize the `.hic` heatmaps and the loops to have better idea what is going on: https://github.com/aidenlab/Juicebox.
 
 New tasks:
+
 16. Try to make loop extrusion force dependent on the value of the PET-count, so as to have closer distance when the PET-count is higher and bigger distance when the PET-count is lower. Experiment and implement your own function for that. 
